@@ -294,7 +294,7 @@ export function ImdbEpisodeGraph({
 	}, [minY, yRange]);
 
 	// Handle mouse move for tooltip positioning
-	const handleMouseMove = (event: React.MouseEvent<SVGSVGElement>, ep: Episode) => {
+	const handleMouseMove = (event: React.MouseEvent<SVGElement>, ep: Episode) => {
 		const svg = svgRef.current;
 		if (!svg) return;
 
