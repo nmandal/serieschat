@@ -1,0 +1,22 @@
+{
+	"name": "SeriesChat - AI-Powered TV & Movie Discovery",
+	"short_name": "SeriesChat",
+	"description": "Chat with IMDb's 12M+ titles. Visualize episode ratings. Discover quality TV shows and movies with AI.",
+	"start_url": "/",
+	"display": "standalone",
+	"background_color": "#09090b",
+	"theme_color": "#6366f1",
+	"icons": [
+		{
+			"src": "/icon-192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "/icon-512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
+}
+

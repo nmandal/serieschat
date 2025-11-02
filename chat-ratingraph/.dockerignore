@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+env/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+
+# Large TSV files (we only need the compiled database)
+*.tsv
+*.tsv.gz
+
+# Charts (generated at runtime)
+charts/
+
+# Documentation
+*.md
+README.md
+QUICKSTART.md
+LLM_INTEGRATION.md
+
+# Fly.io
+fly.toml
+.dockerignore
+

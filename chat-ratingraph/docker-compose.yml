@@ -1,0 +1,36 @@
+version: "3.8"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - DB_PATH=/data/imdb.duckdb
+      - CORS_ORIGIN=http://localhost:3000,http://127.0.0.1:3000
+      - ENVIRONMENT=development
+      - LOG_LEVEL=info
+    volumes:
+      # Mount the database file
+      - ./imdb.duckdb:/data/imdb.duckdb:ro
+      # Mount source code for development (hot reload)
+      - ./03_serve_api.py:/app/03_serve_api.py
+      - ./01_build_imdb_duckdb.py:/app/01_build_imdb_duckdb.py
+      - ./02_chart_series.py:/app/02_chart_series.py
+      # Mount charts directory for output
+      - ./charts:/app/charts
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    restart: unless-stopped
+    networks:
+      - imdb-network
+
+networks:
+  imdb-network:
+    driver: bridge

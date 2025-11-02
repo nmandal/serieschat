@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+ENV/
+env/
+
+# DuckDB
+*.duckdb
+*.duckdb.wal
+
+# IMDb Data Files (large TSV files - download separately)
+*.tsv
+*.tsv.gz
+
+# Charts
+charts/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
